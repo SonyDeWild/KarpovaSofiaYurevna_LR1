@@ -6,8 +6,8 @@
 ## Установка
 
 1. Клонируйте репозиторий:
-   git clone [https://github.com/your-username/Volkova_LR1.git](https://github.com/your-username/Volkova_LR1.git)
-   cd Volkova_LR1
+   git clone [https://github.com/SonyDeWild/KarpovaSofiaYurevna_LR1](https://github.com/SonyDeWild/KarpovaSofiaYurevna_LR1)
+   cd KarpovaSofiaYurevna_LR1
 
 
 2. Откройте файл решения в Visual Studio:
