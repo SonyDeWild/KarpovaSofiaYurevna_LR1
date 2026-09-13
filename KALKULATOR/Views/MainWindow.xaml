@@ -1,0 +1,102 @@
+﻿<Window x:Class="KALKULATOR.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KALKULATOR"
+        mc:Ignorable="d"
+        Title="Обычный калькулятор" Height="500" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="ResultDisplay" Grid.Column="1"  Grid.ColumnSpan="5" FontSize="24" 
+                 TextAlignment="Right" Margin="0,0,0,10" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="B1" Content="1" Grid.Row="1" Grid.Column="1" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B2" Content="2" Grid.Row="1" Grid.Column="2" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B3" Content="3" Grid.Row="1" Grid.Column="3" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="BClear" Content="C" Grid.Row="1" Grid.Column="4" Click="ClearButton_Click" Margin="2"/>
+        <Button x:Name="BEqual" Content="=" Grid.Row="1" Grid.Column="5" Click="ResultButton_Click" Margin="2"/>
+
+        <Button x:Name="B4" Content="4" Grid.Row="2" Grid.Column="1" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B5" Content="5" Grid.Row="2" Grid.Column="2" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B6" Content="6" Grid.Row="2" Grid.Column="3" Click="NumButton_Click" Margin="2" />
+        <Button x:Name="BPlus" Content="+" Grid.Row="2" Grid.Column="4" Click="OpButton_Click" Margin="2" />
+        <Button x:Name="BColor" Content="Цвет" Grid.Row="2" Grid.Column="5" Click="ColorButton_Click" Margin="2"/>
+
+        <Button x:Name="B7" Content="7" Grid.Row="3" Grid.Column="1" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B8" Content="8" Grid.Row="3" Grid.Column="2" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="B9" Content="9" Grid.Row="3" Grid.Column="3" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="BMinus" Content="-" Grid.Row="3" Grid.Column="4" Click="OpButton_Click" Margin="2" />
+        <Button x:Name="BHistory" Content="История" Grid.Row="3" Grid.Column="5" Click="History_Click" Margin="2"/>
+        <Button x:Name="ClearLogButton" Grid.Row="3" Grid.Column="5" Content="X" Click="ClearLog_Click" 
+            Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+            Margin="2" FontSize="10"/>
+
+        <Button x:Name="BDot" Content="," Grid.Row="4" Grid.Column="1" Click="OpButton_Click" Margin="2"/>
+        <Button x:Name="B0" Content="0" Grid.Row="4" Grid.Column="2" Click="NumButton_Click" Margin="2"/>
+        <Button x:Name="BMult" Content="*" Grid.Row="4" Grid.Column="3" Click="OpButton_Click" Margin="2" />
+        <Button x:Name="BDiv" Content="/" Grid.Row="4" Grid.Column="4" Click="OpButton_Click" Margin="2"/>
+        <Button x:Name="BChange" Content="Режим" Grid.Row="4" Grid.Column="5" Click="Change_Click" Margin="2"/>
+
+        <Grid x:Name="colorz" Grid.Row="3" Grid.Column="5" Visibility="Collapsed">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <ComboBox x:Name="ColorZone" Width="70" 
+      SelectionChanged="ColorZone_SelectionChanged">
+                    <ComboBoxItem>Фон</ComboBoxItem>
+                    <ComboBoxItem>Текст</ComboBoxItem>
+                    <ComboBoxItem>Кнопки</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Red" Background="Red" Grid.Row="0" Grid.Column="0" Click="Color_Click"/>
+                <Button x:Name="Yellow" Background="Yellow" Grid.Row="0" Grid.Column="1" Click="Color_Click"/>
+                <Button x:Name="Blue" Background="Blue" Grid.Row="0" Grid.Column="2" Click="Color_Click"/>
+                <Button x:Name="Green" Background="Green" Grid.Row="1" Grid.Column="0" Click="Color_Click"/>
+                <Button x:Name="Cyan" Background="Cyan" Grid.Row="1" Grid.Column="1" Click="Color_Click"/>
+                <Button x:Name="White" Background="White" Grid.Row="1" Grid.Column="2" Click="Color_Click"/>
+                <Button x:Name="Purple" Background="Purple" Grid.Row="2" Grid.Column="0" Click="Color_Click"/>
+                <Button x:Name="Gray" Background="Gray" Grid.Row="2" Grid.Column="1" Click="Color_Click"/>
+                <Button x:Name="Black" Background="Black" Grid.Row="2" Grid.Column="2" Click="Color_Click"/>
+            </Grid>
+        </Grid>
+
+
+    </Grid>
+
+</Window>
